@@ -40,13 +40,13 @@ A more complete user guide will be available soon.
 
 #### Quick plot
 x and y must be 1D array in double precision (you can force the conversion with *real(x,8)*). 
-```Fortran
+```fortran
 call plt_plot(x, y, 'Title', 'xlabel', 'ylabel', 'plot.jpg')
 ```
 
 #### Advanced plot
 x and y must be 1D array in double precision (you can force the conversion with *real(x,8)*). 
-```Fortran
+```fortran
 call plt_plot_adv(x, & ! Argument x (1D array float64)
                   y, & ! Argument y (1D array float64)
                   'steelblue', & ! color. Ex: b g r c m y k w grey, brown, ivory, teal, royalblue, orchid
@@ -62,7 +62,8 @@ call plt_plot_adv(x, & ! Argument x (1D array float64)
 
 #### Advanced multiplot
 x and y must be 2D array in double precision organized as x(n, m) with n the number of point for a given plot and m the plot index. x and y must be the same size.
-```Fortran
+```fortran
+! Example for 3 plots
 call plt_multiplot(mat_X(:,0:3), & ! Argument x (2D array float64 organized as (data, plot)). All the plots must have the same size
                    mat_Y(:,0:3), & ! Argument y (2D array float64 organized as (data, plot)). All the plots must have the same size
                    'steelblue; coral; lime', & ! color. Use ; as separator. Ex: b g r c m y k w grey, brown, ivory, teal, royalblue, orchid
@@ -79,7 +80,7 @@ call plt_multiplot(mat_X(:,0:3), & ! Argument x (2D array float64 organized as (
 
 #### Scatter
 x, y, s and c must be 1D array in double precision (you can force the conversion with *real(x,8)*). 
-```Fortran
+```fortran
 call plt_scatter_full(x, & ! Argument x (1D array float64)
                       y, & ! Argument y (1D array float64)
                       s, & ! Argument surface area (1D array float64)
