@@ -21,6 +21,7 @@ end program plot_cosx
   * Do not require to write output files to be read by external languages.
   * Do not generate external files, aside the wanted figures.
   * Performed during the Fortran execution.
+  * Do not run command lines during the Fortran execution.
   * The same approach can be used to run Python script modifying the Fortran variables (the memory is shared between Fortran and Python).
 
 * Drawbacks:
