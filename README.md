@@ -63,17 +63,17 @@ call plt_plot_adv(x, & ! Argument x (1D array float64)
 #### Advanced multiplot
 x and y must be 2D array in double precision organized as x(n, m) with n the number of point for a given plot and m the plot index. x and y must be the same size.
 ```Fortran
-call plt_multiplot(mat_X, & ! Argument x (2D array float64 organized as (data, plot)). All the plots must have the same size
-                    mat_Y, & ! Argument y (2D array float64 organized as (data, plot)). All the plots must have the same size
-                    'steelblue; coral; lime', & ! color. Use ; as separator. Ex: b g r c m y k w grey, brown, ivory, teal, royalblue, orchid
-                    '^; ,; d', & ! marker. Use ; as separator. Ex: None . , o v ^ < > 1 2 3 4 8 s p P * h H + x X D d | _ 
-                    'dashdot; solid; dashed', & ! linestyle. Use ; as separator. Ex: solid dotted dashed dashdot
-                    (/ 3.d0, 1.d0, 2.d0 /), & ! linewidth (float64)
-                    (/ 12.d0, 15.d0, 5.d0 /), & ! markersize (float64)
-                    'Title: plt_multiplot', & ! title. Leave '' for none
-                    'xlabel', & ! xlabel. Leave '' for none
-                    'ylabel', & ! ylabel. Leave '' for none
-                    'Figs/plt_multiplot.jpg') ! filename to save. MUST end with a valid format (.png, .pdf, ...)
+call plt_multiplot(mat_X(:,0:3), & ! Argument x (2D array float64 organized as (data, plot)). All the plots must have the same size
+                   mat_Y(:,0:3), & ! Argument y (2D array float64 organized as (data, plot)). All the plots must have the same size
+                   'steelblue; coral; lime', & ! color. Use ; as separator. Ex: b g r c m y k w grey, brown, ivory, teal, royalblue, orchid
+                   '^; ,; d', & ! marker. Use ; as separator. Ex: None . , o v ^ < > 1 2 3 4 8 s p P * h H + x X D d | _ 
+                   'dashdot; solid; dashed', & ! linestyle. Use ; as separator. Ex: solid dotted dashed dashdot
+                   (/ 3.d0, 1.d0, 2.d0 /), & ! linewidth (float64)
+                   (/ 12.d0, 15.d0, 5.d0 /), & ! markersize (float64)
+                   'Title: plt_multiplot', & ! title. Leave '' for none
+                   'xlabel', & ! xlabel. Leave '' for none
+                   'ylabel', & ! ylabel. Leave '' for none
+                   'Figs/plt_multiplot.jpg') ! filename to save. MUST end with a valid format (.png, .pdf, ...)
 ```
 
 
