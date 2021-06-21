@@ -131,7 +131,7 @@ make
 
 ***
 
-### Installation errors
+## Installation errors
 
 * If the message `error while loading shared libraries` occurs, you must find the `path` to this library and execute:
   ```shell
