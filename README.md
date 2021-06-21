@@ -1,4 +1,7 @@
-# pltFor
+# pltFor ![](https://img.shields.io/badge/version-0.2-blue)
+
+![GitHub](https://img.shields.io/github/license/damienminenna/pltFor)
+![GitHub last commit](https://img.shields.io/github/last-commit/damienminenna/pltFor)
 
 **pltFor** (reads "plot for") is a Fortran-Python interface library to plot figures directly in Fortran. Here an example:
 
