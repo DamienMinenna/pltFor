@@ -8,7 +8,8 @@ program plot_cosx
   use, intrinsic :: iso_fortran_env
   use pltFor ! load pltFor module
   implicit none
-  real(real64), dimension(6) :: x = (/ 1., 2., 3., 4., 5., 6. /)
+  integer(int32) :: i
+  real(real64), dimension(20) :: x = (/(i, i=1, 20, 1)/)
   
   call plt_plot(x, cos(x), 'Title', 'xlabel', 'ylabel', 'plot.jpg')
 

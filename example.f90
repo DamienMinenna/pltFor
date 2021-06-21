@@ -15,6 +15,8 @@ program example_pltFor
 
   implicit none
   
+  integer(i32) :: i
+
   real(dp), dimension(10) :: x
   real(dp), dimension(10) :: y
 
@@ -27,7 +29,7 @@ program example_pltFor
   print *, 'Start example.f90'
 
   ! Arbitrary arrays
-  x = (/ 1.d0, 2.d0, 3.d0, 4.d0, 5.d0, 6.d0, 7.d0, 8.d0, 9.d0, 10.d0 /)
+  x = (/(i, i=1, 10, 1)/)
   y = cos(x)
 
   s = 4.d0 * x**2
